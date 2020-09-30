@@ -19,6 +19,7 @@
     {"id":{"name":"fce_00_init","path":"objects/fce_00_init/fce_00_init.yy",},"order":0,},
     {"id":{"name":"snd_win","path":"sounds/snd_win/snd_win.yy",},"order":0,},
     {"id":{"name":"obj_text","path":"objects/obj_text/obj_text.yy",},"order":1,},
+    {"id":{"name":"reversi_test_is_final","path":"scripts/reversi_test_is_final/reversi_test_is_final.yy",},"order":9,},
     {"id":{"name":"obj_background_symbol","path":"objects/obj_background_symbol/obj_background_symbol.yy",},"order":0,},
     {"id":{"name":"__MINIMAX_CONFIGS__","path":"scripts/__MINIMAX_CONFIGS__/__MINIMAX_CONFIGS__.yy",},"order":0,},
     {"id":{"name":"relerp","path":"scripts/relerp/relerp.yy",},"order":4,},

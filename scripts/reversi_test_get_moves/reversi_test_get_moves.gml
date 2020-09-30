@@ -16,4 +16,19 @@ function reversi_test_get_moves() {
 	expectedMoves = [19, 26, 37, 44];
 	gotMoves = state.getMoves();
 	assert_equal(gotMoves, expectedMoves, "Wrong moves for opening board!");
+	
+	// 1 move for passing board
+	state = new ReversiState([
+		+1, +1, +1, +1, +1, +1, +1, +1,
+		-1, -1, -1, -1, -1, -1, -1, -1,
+		00, 00, 00, 00, 00, 00, 00, 00,
+		00, 00, 00, 00, 00, 00, 00, 00,
+		00, 00, 00, 00, 00, 00, 00, 00,
+		00, 00, 00, 00, 00, 00, 00, 00,
+		00, 00, 00, 00, 00, 00, 00, 00,
+		00, 00, 00, 00, 00, 00, 00, 00
+	], -1);
+	expectedMoves = [-1];
+	gotMoves = state.getMoves();
+	assert_equal(gotMoves, expectedMoves, "Wrong moves for passing board!");
 }
