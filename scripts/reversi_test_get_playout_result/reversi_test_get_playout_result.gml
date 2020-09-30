@@ -1,5 +1,5 @@
-///@func reversi_test_final_get_playout_result()
-function reversi_test_final_get_playout_result() {
+///@func reversi_test_get_playout_result()
+function reversi_test_get_playout_result() {
 	var state, expected, got;
 	
 	// Opening state

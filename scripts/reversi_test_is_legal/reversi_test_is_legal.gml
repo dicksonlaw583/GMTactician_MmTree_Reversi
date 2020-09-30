@@ -13,7 +13,7 @@ function reversi_test_is_legal() {
 		00, 00, 00, 00, 00, 00, 00, 00,
 		00, 00, 00, 00, 00, 00, 00, 00
 	], +1);
-	assert_fail(state.isLegal(-1), "Invalid negative move passed!");
+	assert_fail(state.isLegal(-1), "Invalid pass got through!");
 	assert_fail(state.isLegal(64), "Invalid big move passed!");
 	assert_fail(state.isLegal(35), "Invalid plugged move passed!");
 	assert_fail(state.isLegal(42), "Invalid flipless move passed!");
@@ -21,4 +21,17 @@ function reversi_test_is_legal() {
 	assert(state.isLegal(26), "Move 26 failed!");
 	assert(state.isLegal(37), "Move 37 failed!");
 	assert(state.isLegal(44), "Move 44 failed!");
+	
+	// Test pass where legal
+	state = new ReversiState([
+		+1, +1, +1, +1, +1, +1, +1, +1,
+		-1, -1, -1, -1, -1, -1, -1, -1,
+		00, 00, 00, 00, 00, 00, 00, 00,
+		00, 00, 00, 00, 00, 00, 00, 00,
+		00, 00, 00, 00, 00, 00, 00, 00,
+		00, 00, 00, 00, 00, 00, 00, 00,
+		00, 00, 00, 00, 00, 00, 00, 00,
+		00, 00, 00, 00, 00, 00, 00, 00
+	], -1);
+	assert(state.isLegal(-1), "Pass was not accepted!");
 }

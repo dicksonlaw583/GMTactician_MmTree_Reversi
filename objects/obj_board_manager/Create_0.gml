@@ -16,6 +16,8 @@ insertPiece = function(_pos, _player) {
 			other.boardInsts[_pos] = id;
 			return id;
 		}
+	} else {
+		audio_play_sound(snd_pass, 1, false);
 	}
 };
 

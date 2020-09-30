@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_flip.wav",
-  "duration": 0.505,
+  "duration": 0.255,
   "parent": {
     "name": "Sounds",
     "path": "folders/Reversi_ingame/Sounds.yy",

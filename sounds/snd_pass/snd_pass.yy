@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_place.wav",
-  "duration": 0.205272,
+  "soundFile": "snd_pass.wav",
+  "duration": 0.805,
   "parent": {
     "name": "Sounds",
     "path": "folders/Reversi_ingame/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_place",
+  "name": "snd_pass",
   "tags": [],
   "resourceType": "GMSound",
 }

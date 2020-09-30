@@ -1,11 +1,11 @@
 ///@desc Draw status
 var yy = y;
 
-// Set activeness
-draw_set_alpha(active ? 1 : 0.6);
-
 // Player piece
 draw_sprite(player ? spr_black : spr_white, 0, x, yy);
+
+// Set activeness
+draw_set_alpha(active ? 1 : 0.6);
 
 // Name and status
 yy += sprite_height;

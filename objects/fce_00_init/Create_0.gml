@@ -10,16 +10,14 @@ global.state = new ReversiState([
 	00, 00, 00, 00, 00, 00, 00, 00,
 ], +1);
 
-// Choose black
+// Choose one side to play as black
 global.playingAs = choose([+1, -1], [-1, +1]);
-with (obj_player_manager) {
-	player = global.playingAs[user];
-}
 
 // Update visuals
 obj_board_manager.sync(global.state);
 with (obj_player_manager) {
-	points = 0;
+	player = global.playingAs[user];
+	points = 2;
 }
 
 // Wait 0.5 second before changing

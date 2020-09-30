@@ -1,5 +1,5 @@
 ///@desc Wait for a move from the Minimax daemon
-if (daemon.ready) {
+if (daemon != noone && daemon.ready) {
 	// Get and make the move
 	var move = tree.getBestMove();
 	global.state.applyMove(move);

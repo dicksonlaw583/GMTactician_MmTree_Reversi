@@ -86,7 +86,7 @@ function ReversiState(_board, _player) constructor {
 		// Handle passes as special case; only valid if it is the only move
 		if (move < 0) {
 			var availableMoves = getMoves();
-			return array_length(availableMoves) == 1 && getMoves[0] < 0;
+			return array_length(availableMoves) == 1 && availableMoves[0] < 0;
 		}
 		// Make plays on empty on-board squares only
 		if (move >= 64 || board[move] != 0) return false;

@@ -10,7 +10,7 @@ function reversi_test_all() {
 	reversi_test_get_moves();
 	reversi_test_get_player();
 	reversi_test_apply_move();
-	reversi_test_final_get_playout_result();
+	reversi_test_get_playout_result();
 	/* ^ Tests here ^ */
 	
 	var timeB = current_time;
