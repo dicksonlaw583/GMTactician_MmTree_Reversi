@@ -30,7 +30,7 @@ repeat (times) {
 ini_open(working_directory + "settings.ini");
 global.mmPlies = ini_read_real("config", "plies", 2);
 ini_close();
-global.playerIsAi = [false, true];
+global.userIsAi = [false, true];
 global.userName = ["Player 1", "Player 2"];
 
 // Boot up
