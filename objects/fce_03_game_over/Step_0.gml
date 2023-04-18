@@ -7,5 +7,5 @@ if (mouse_check_button_released(mb_left) && alarm[0] < 0 && !is_undefined(obj_bo
 		deactivate();
 	}
 	// Wait a little before restarting
-	alarm[0] = room_speed;
+	alarm[0] = game_get_speed(gamespeed_fps);
 }

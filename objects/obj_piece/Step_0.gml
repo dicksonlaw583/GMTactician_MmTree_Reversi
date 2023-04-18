@@ -1,5 +1,8 @@
 ///@desc Phases
 
+// Turn off Feather false positives for enum OBJ_PIECE and instance variables progress, phase
+///Feather disable GM1014
+///Feather disable GM2016
 switch (phase) {
 	// Fade in
 	case OBJ_PIECE.ENTERING:
@@ -38,3 +41,5 @@ switch (phase) {
 		}
 	break;
 }
+///Feather enable GM1014
+///Feather enable GM2016

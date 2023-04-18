@@ -83,7 +83,11 @@
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Fonts","folderPath":"folders/Fonts.yy","order":7,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Libraries_config","folderPath":"folders/Libraries_config.yy","order":1,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"GMAssert","folderPath":"folders/Libraries_config/GMAssert.yy","order":4,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"GMTactician_MmTree","folderPath":"folders/Libraries_config/GMTactician_MmTree.yy","order":5,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Libraries","folderPath":"folders/Libraries.yy","order":0,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"GMAssert","folderPath":"folders/Libraries/GMAssert.yy","order":7,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"GMTactician_MmTree","folderPath":"folders/Libraries/GMTactician_MmTree.yy","order":8,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"RoomFadeTo","folderPath":"folders/Libraries/RoomFadeTo.yy","order":3,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Reversi_ingame","folderPath":"folders/Reversi_ingame.yy","order":4,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Flowchart","folderPath":"folders/Reversi_ingame/Flowchart.yy","order":6,},
@@ -97,10 +101,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"UI","folderPath":"folders/System/UI.yy","order":2,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sounds","folderPath":"folders/System/UI/Sounds.yy","order":6,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/System/UI/Sprites.yy","order":7,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"GMAssert","folderPath":"folders/Libraries/GMAssert.yy","order":7,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"GMAssert","folderPath":"folders/Libraries_config/GMAssert.yy","order":4,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"GMTactician_MmTree","folderPath":"folders/Libraries/GMTactician_MmTree.yy","order":8,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"GMTactician_MmTree","folderPath":"folders/Libraries_config/GMTactician_MmTree.yy","order":5,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
@@ -110,6 +110,6 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.0.0.19",
+    "IDEVersion": "2022.0.1.31",
   },
 }

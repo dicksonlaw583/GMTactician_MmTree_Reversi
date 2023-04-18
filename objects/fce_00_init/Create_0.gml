@@ -21,4 +21,4 @@ with (obj_player_manager) {
 }
 
 // Wait 0.5 second before changing
-alarm[0] = 0.5*room_speed;
+alarm[0] = 0.5*game_get_speed(gamespeed_fps);

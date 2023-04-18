@@ -8,7 +8,7 @@ Applicable only to games with randomization.
 Configurations for the background Minimax daemon.
 - Minimum ticks/step: The minimum number of ticks to evaluate per step.
 - Default ticks/step: The default number of ticks to evaluate per step.
-- Congestion factor: If fps_real (native) or fps (HTML5) falls below this times room_speed, the daemon will enter congestion control to minimize screen lag.
+- Congestion factor: If fps_real (native) or fps (HTML5) falls below this times game_get_speed(gamespeed_fps), the daemon will enter congestion control to minimize screen lag.
 - Congestion cut: The fraction (0-1) of the current ticks/step rate to reduce by when in congestion control.
 - Slow start increment: The increase in the current ticks/step rate when not in congestion control.
 **/

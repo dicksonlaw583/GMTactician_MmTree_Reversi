@@ -222,6 +222,8 @@ function MmTree(state, maxDepth) constructor {
 	};
 	
 	///@func getBestMove()
+	///@self MmTree
+	///@return {Any}
 	///@desc Return the move that the Minimax tree thinks is the best (highest score if max is to play, lowest score if min is to play).
 	static getBestMove = function() {
 		var _bestNode = _getBestChild(root);
