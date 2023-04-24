@@ -1,6 +1,6 @@
 # GMTactician: Minimax Reversi Example
 
-A demonstration of [Minimax](https://en.wikipedia.org/wiki/Minimax) playing Reversi, implemented using [GMTactician Collection: Minimax Devkit](https://github.com/dicksonlaw583/GMTactician_MmTree) on GameMaker Studio 2.3.0.
+A demonstration of [Minimax](https://en.wikipedia.org/wiki/Minimax) playing Reversi, implemented using [GMTactician Collection: Minimax Devkit](https://github.com/dicksonlaw583/GMTactician_MmTree) on GameMaker Studio 2022 LTS.
 
 ## Introduction
 
@@ -8,6 +8,4 @@ This project implements a random-playout, minimally blocking Minimax AI that pla
 
 ## Requirements
 
-- GameMaker Studio 2.3.0 or higher
-	- Known issue: This library does not work on the HTML5 export for Runtime 2.3.0.401 due to a bug in the way it handles passed functions/methods.
-	- Known issue: Runtime 2.3.0.401 has a garbage collector bug that triggers for the 3-ply AI unless a dummy tree is built and destroyed at the beginning of the game.
+GameMaker Studio 2022 / 2.3.7 or higher
