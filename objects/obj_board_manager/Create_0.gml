@@ -3,7 +3,13 @@
 // Game state
 boardInsts = array_create(64, noone);
 
-// Insert a piece
+///@func insertPiece(_pos, _player)
+///@param {Real} _pos The position to insert at (0-63)
+///@param {Real} _player The player to play as (-1, 1)
+///@return {Id.Instance,Undefined}
+///@self obj_board_manager
+///@desc Insert the given player's piece at the given position.
+///Return the instance ID if successful, or undefined if passing or unsuccessful.
 insertPiece = function(_pos, _player) {
 	if (_pos >= 0) {
 		var posX = _pos mod 8;
@@ -21,7 +27,9 @@ insertPiece = function(_pos, _player) {
 	}
 };
 
-// Clear board
+///@func clear()
+///@self obj_board_manager
+///@desc Clear this board.
 clear = function() {
 	for (var i = 0; i < 64; ++i) {
 		if (instance_exists(boardInsts[i])) {
@@ -31,7 +39,9 @@ clear = function() {
 	}
 };
 
-// Sync board to state
+///@func sync()
+///@self obj_board_manager
+///@desc Sync board to state.
 sync = function(s) {
 	var board = s.board;
 	for (var i = 63; i >= 0; --i) {
@@ -50,7 +60,13 @@ sync = function(s) {
 	}
 };
 
-// Convert in-room position to cell position
+///@func xyToMove(xx, yy)
+///@self obj_board_manager
+///@param {Real} xx X position to convert
+///@param {Real} yy Y position to convert
+///@return {Real,Undefined}
+///@desc Convert in-room position (x, y) to cell position (0-63).
+///If out-of-bounds, return undefined.
 xyToMove = function(xx, yy) {
 	var cy = round((yy-y)/cellHeight);
 	if (cy >= 0 && cy <= 7) {

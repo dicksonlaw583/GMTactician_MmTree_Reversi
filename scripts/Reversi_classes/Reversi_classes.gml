@@ -1,14 +1,14 @@
 ///@func ReversiState(board, player)
-///@param {Piece[64]} board
-///@param {Player} player
+///@param {Array<Real>} board The board layout in row-major order (8x8=64)
+///@param {Real} player The player whose turn it is (-1, 1)
 ///@desc A Connect-4 game state for GMTactician
-function ReversiState(_board, _player) constructor {
-	board = _board;
-	player = _player;
+function ReversiState(board, player) constructor {
+	self.board = board;
+	self.player = player;
 	
 	#region GMTactician required methods
 	///@func readMemo(memo)
-	///@param {Memo} memo
+	///@param {Array<Real>} memo
 	///@desc Restore the state to the given memo. 
 	static readMemo = function(memo) {
 		array_copy(board, 0, memo, 0, 64);
@@ -16,15 +16,19 @@ function ReversiState(_board, _player) constructor {
 	};
 	
 	///@func getMemo()
+	///@return {Array<Real>}
 	///@desc Return a memo from the current state.
 	static getMemo = function() {
-		var memo = array_create(65);
+		var memo = array_create(65, 0);
 		array_copy(memo, 0, board, 0, 64);
 		memo[64] = player;
+		///Feather disable GM1045
 		return memo;
+		///Feather enable GM1045
 	};
 	
 	///@func clone()
+	///@return {Struct.ReversiState}
 	///@desc Return an exact copy of the current state.
 	static clone = function() {
 		var _board = array_create(64);
@@ -33,6 +37,7 @@ function ReversiState(_board, _player) constructor {
 	};
 	
 	///@func isFinal()
+	///@return {Bool}
 	///@desc Return whether the current state represents a finished game.
 	static isFinal = function() {
 		// For each square
@@ -55,6 +60,7 @@ function ReversiState(_board, _player) constructor {
 	};
 	
 	///@func getMoves()
+	///@return {Array<Real>}
 	///@desc Return an array of moves possible from the current state. Assumes that the game is not already over.
 	static getMoves = function() {
 		var moves = [];
@@ -74,13 +80,14 @@ function ReversiState(_board, _player) constructor {
 	};
 	
 	///@func getCurrentPlayer()
+	///@return {Real}
 	///@desc Return who is the current player.
 	static getCurrentPlayer = function() {
 		return player;
 	};
 	
 	///@func isLegal(move)
-	///@param {Move} move
+	///@param {Real} move The move to check (0-63 to place, -1 to pass)
 	///@desc Return whether the given move is legal for the current state.
 	static isLegal = function(move) {
 		// Handle passes as special case; only valid if it is the only move
@@ -102,7 +109,7 @@ function ReversiState(_board, _player) constructor {
 	};
 	
 	///@func applyMove(move)
-	///@param {Move} move
+	///@param {Real} move The move to apply (0-63 to place, -1 to pass)
 	///@desc Make the specified move on the current state.
 	static applyMove = function(move) {
 		// -1 is a pass; others are placements
@@ -129,6 +136,7 @@ function ReversiState(_board, _player) constructor {
 	};
 	
 	///@func getPlayoutResult()
+	///@return {Real}
 	///@desc Return a playout result describing the current state.
 	static getPlayoutResult = function() {
 		var boardSum = 0;
@@ -140,11 +148,12 @@ function ReversiState(_board, _player) constructor {
 	#endregion
 	
 	#region Utilities
-	///@func _probe(pos, dx, dy, player)
-	///@param {0-63} pos Board position to probe from
-	///@param {-1|0|1} dx X direction to probe in
-	///@param {-1|0|1} dy Y direction to probe in
-	///@param {Player} player The player to probe as
+	///@func _probe(pos, dx, dy, p)
+	///@param {Real} pos Board position to probe from (0-63)
+	///@param {Real} dx X direction to probe in (-1, 0, 1)
+	///@param {Real} dy Y direction to probe in (-1, 0, 1)
+	///@param {Real} p The player to probe as
+	///@return {Real}
 	///@desc Return the length of the run of flips in the given direction if the player plays there. If no run, return 0.
 	static _probe = function(pos, dx, dy, p) {
 		// Square not empty, no run
@@ -180,8 +189,9 @@ function ReversiState(_board, _player) constructor {
 		return 0;
 	};
 	
-	///@func getScore(player)
-	///@param {Player} player
+	///@func getScore(p)
+	///@param {Real} p The player whose turn it is (-1, 1)
+	///@return {Real}
 	///@desc Return the score for the given player
 	static getScore = function(p) {
 		var _score = 0;

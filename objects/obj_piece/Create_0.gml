@@ -27,7 +27,7 @@ flip = function() {
 // Set the current player
 setPlayer = function(p) {
 	player = p;
-	sprite_index = p ? spr_black : spr_white;
+	sprite_index = (p > 0) ? spr_black : spr_white;
 	image_index = 0;
 	image_speed = 0;
 };
